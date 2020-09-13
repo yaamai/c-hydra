@@ -21,7 +21,7 @@ def image_build(ctx, repo, arch):
     "steps": [
       {
         "name": "submodules",
-        "image": "alpine/git",
+        "image": "yaamai/alpine-git:20200913",
         "commands": [
           "git submodule update --init --recursive --remote"
         ]
