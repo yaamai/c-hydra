@@ -20,6 +20,13 @@ def image_build(ctx, repo, arch):
     },
     "steps": [
       {
+        "name": "submodules",
+        "image": "alpine/git",
+        "commands": [
+          "git submodule update --init --recursive --remote"
+        ]
+      },
+      {
         "name": "image-build",
         "image": "plugins/docker",
         "settings": {
