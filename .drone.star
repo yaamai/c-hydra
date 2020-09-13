@@ -33,6 +33,7 @@ def image_build(ctx, repo, arch):
           "build_args": [
             "GOARCH=%s" % arch
           ],
+          "context": "src/%s" % (repo),
           "tags": ["%s-%s" % (TAG_PATTERN, arch)]
         }
       }
