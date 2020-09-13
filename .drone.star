@@ -64,7 +64,7 @@ def docker_manifest(ctx, repo):
           "password": {
             "from_secret": "docker_password"
           },
-          "target": "%s/%s:%s-ARCH" % (ctx.repo.namespace, repo, TAG_PATTERN),
+          "target": "%s/%s:%s" % (ctx.repo.namespace, repo, TAG_PATTERN),
           "template": "%s/%s:%s-ARCH" % (ctx.repo.namespace, repo, TAG_PATTERN),
           "platforms": [
             "linux/amd64",
