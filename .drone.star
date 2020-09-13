@@ -36,11 +36,12 @@ def image_build(ctx, repo, arch):
           "password": {
             "from_secret": "docker_password"
           },
-          "repo": "%s/%s" % (ctx.repo.namespace, repo),
+          "dockerfile": "Dockerfile.%s" % (repo),
           "build_args": [
             "GOARCH=%s" % arch
           ],
           "context": "src/%s" % (repo),
+          "repo": "%s/%s" % (ctx.repo.namespace, repo),
           "tags": ["%s-%s" % (TAG_PATTERN, arch)]
         }
       }
