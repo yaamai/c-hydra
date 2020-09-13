@@ -1,0 +1,6 @@
+[submodule "src/hydra-maester"]
+	path = src/hydra-maester
+	url = https://github.com/ory/hydra-maester.git
+[submodule "src/hydra"]
+	path = src/hydra
+	url = https://github.com/ory/hydra.git
