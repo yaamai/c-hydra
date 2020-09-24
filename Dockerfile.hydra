@@ -22,6 +22,7 @@ FROM scratch
 COPY --from=base /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=base /etc/nsswitch.conf /etc/nsswitch.conf
 COPY --from=builder /work/hydra /usr/bin/hydra
+COPY --from=builder /work/.schema /
 
 USER 1000
 
