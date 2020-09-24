@@ -1,0 +1,7 @@
+FROM alpine
+ARG ARCH=amd64
+
+RUN apk --update --no-cache add curl &&\
+    curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/$ARCH/kubectl &&\
+    chmod +x kubectl &&\
+    mv kubectl /usr/local/bin

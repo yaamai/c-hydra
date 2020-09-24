@@ -1,6 +1,6 @@
 TAG_PATTERN = "${DRONE_TAG:-${DRONE_COMMIT_SHA:0:7}}"
 TARGET_ARCH_LIST = ["amd64", "arm64"]
-REPO_LIST = ["hydra", "hydra-maester"]
+REPO_LIST = ["hydra", "hydra-maester", "kubectl"]
 
 def main(ctx):
   pipeline_list = []
