@@ -38,7 +38,8 @@ def image_build(ctx, repo, arch):
           },
           "dockerfile": "Dockerfile.%s" % (repo),
           "build_args": [
-            "GOARCH=%s" % arch
+            "GOARCH=%s" % arch,
+            "ARCH=%s" % arch
           ],
           "context": "src/%s" % (repo),
           "repo": "%s/%s" % (ctx.repo.namespace, repo),
